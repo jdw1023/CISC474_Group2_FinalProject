@@ -415,7 +415,7 @@ let endGame = function(){
         }else{
             let guest_name = prompt("Guest, please enter your name\n");
             let data = {name: guest_name, 'score': playerStats.score, 'time': playerStats.time, 'resets': playerStats.resets, 'deaths': playerStats.deaths, 'coins': playerStats.coins, 'distance': playerStats.distance, 'jumps': playerStats.jumps};
-            postData('http://cisc474groupgame.herokuapp.com/scoreboard', data);
+            postData('https://cisc474groupgame.herokuapp.com/scoreboard', data);
         }
     }
     // window.location = '../index.html';
