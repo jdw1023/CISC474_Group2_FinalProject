@@ -48,7 +48,7 @@ function displayScoreboard(){
 }
 
 function getUserStats(){
-	return fetch('http://cisc474groupgame.herokuapp.com/user?token='+ auth.currentUser.Aa).then(function(response){
+	return fetch('https://cisc474groupgame.herokuapp.com/user?token='+ auth.currentUser.Aa).then(function(response){
         return response.json();
     })
 }
