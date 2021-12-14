@@ -413,9 +413,9 @@ let endGame = function(){
             console.log(data);
             postData('https://cisc474groupgame.herokuapp.com/scoreboard?token='+auth.currentUser.Aa, data);
         }else{
-            let data = {'score': playerStats.score, 'time': playerStats.time, 'resets': playerStats.resets, 'deaths': playerStats.deaths, 'coins': playerStats.coins, 'distance': playerStats.distance, 'jumps': playerStats.jumps};
-                let guest_name = prompt("Guest, please enter your name\n");
-                postData('https://cisc474groupgame.herokuapp.com/scoreboard', data);
+            let guest_name = prompt("Guest, please enter your name\n");
+            let data = {name: guest_name, 'score': playerStats.score, 'time': playerStats.time, 'resets': playerStats.resets, 'deaths': playerStats.deaths, 'coins': playerStats.coins, 'distance': playerStats.distance, 'jumps': playerStats.jumps};
+            postData('http://cisc474groupgame.herokuapp.com/scoreboard', data);
         }
     }
     // window.location = '../index.html';
