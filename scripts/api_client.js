@@ -18,7 +18,7 @@ async function postData(url = '', data = {}) {
   }
 
 function displayScoreboard(){
-  fetch('http://localhost:9001/scoreboard')
+  fetch('https://cisc474groupgame.herokuapp.com/scoreboard')
 				.then(function(response) {
 					return response.json();
 				})
@@ -48,7 +48,7 @@ function displayScoreboard(){
 }
 
 function getUserStats(){
-	return fetch('http://localhost:9001/user?token='+ auth.currentUser.Aa).then(function(response){
+	return fetch('http://cisc474groupgame.herokuapp.com/user?token='+ auth.currentUser.Aa).then(function(response){
         return response.json();
     })
 }

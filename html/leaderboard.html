@@ -19,7 +19,7 @@
 		</div>
 		<script>
 			// get scoreboard data from server
-			var scoreboard = fetch('http://localhost:9001/scoreboard')
+			var scoreboard = fetch('https://cisc474groupgame.herokuapp.com/scoreboard')
 				.then(function(response) {
 					return response.json();
 				})
